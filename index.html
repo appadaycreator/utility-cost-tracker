@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>光熱費推移記録ツール【無料】簡単・無料計算</title>
+    <meta name="description" content="電気・ガス・水道の月別コストを記録して年間推移を可視化。節約目標設定にも対応。登録不要・完全無料でご利用いただけます。">
+    <link rel="canonical" href="https://appadaycreator.github.io/utility-cost-tracker/">
+    <meta property="og:title" content="光熱費推移記録ツール【無料】簡単・無料計算">
+    <meta property="og:description" content="電気・ガス・水道の月別コストを記録して年間推移を可視化。節約目標設定にも対応。登録不要・完全無料でご利用いただけます。">
+    <meta property="og:url" content="https://appadaycreator.github.io/utility-cost-tracker/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+    <!-- Clarity -->
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","s3t9vl8h3v");</script>
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"光熱費推移記録ツール","description":"電気・ガス・水道の月別コストを記録して年間推移を可視化。節約目標設定にも対応。登録不要・完全無料でご利用いただけます。","url":"https://appadaycreator.github.io/utility-cost-tracker/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #E0E7FF 0%, #F0F4FF 100%); min-height: 100vh; color: #333; line-height: 1.6; }
+        .site-header { background: #6366F1; color: white; padding: 32px 20px; text-align: center; }
+        .site-header .emoji { font-size: 52px; margin-bottom: 8px; }
+        .site-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .site-header p { font-size: 14px; opacity: 0.9; }
+        .container { max-width: 800px; margin: 0 auto; padding: 16px; }
+        .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 16px; }
+        .btn { background: #6366F1; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; }
+        .btn:hover { opacity: 0.9; }
+        .btn:active { transform: scale(0.98); }
+        input, select, textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 15px; margin-top: 4px; font-family: inherit; }
+        input:focus, select:focus { outline: none; border-color: #6366F1; }
+        label { font-size: 13px; font-weight: 600; color: #555; display: block; margin-top: 14px; margin-bottom: 2px; }
+        .result { display: none; }
+        .result.show { display: block; }
+        .result-value { font-size: 36px; font-weight: 700; color: #6366F1; text-align: center; padding: 16px 0; }
+        .badge { display: inline-block; background: #6366F120; color: #6366F1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        /* ── サービス固有CSS ── */
+
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="site-header">
+        <div class="emoji">⚡</div>
+        <h1>光熱費推移記録ツール</h1>
+        <p>電気・ガス・水道の月別コストを記録して年間推移を可視化。節約目標設定にも対応...</p>
+    </header>
+
+    <main class="container">
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <div class="card">
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;">⚡ 記録を追加</h2>
+          <label style="font-size:13px;font-weight:600;">年月</label>
+          <input type="month" id="val-month" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin-bottom:10px;">
+          <label style="font-size:13px;font-weight:600;">種別</label>
+          <select id="val-type" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin-bottom:10px;">
+            <option value="電気">⚡ 電気</option>
+            <option value="ガス">🔥 ガス</option>
+            <option value="水道">💧 水道</option>
+          </select>
+          <label style="font-size:13px;font-weight:600;">金額（円）</label>
+          <input type="number" id="val-amount" placeholder="例: 8500" min="0" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin-bottom:10px;">
+          <button class="btn" style="margin-top:16px;" onclick="addEntry()">追加する</button>
+        </div>
+        <div class="card" style="margin-top:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <h2 style="font-size:16px;font-weight:700;">📋 記録一覧</h2>
+            <span id="entry-count" style="font-size:12px;color:#999;"></span>
+          </div>
+          <div id="entries">
+            <p style="text-align:center;color:#bbb;font-size:14px;padding:20px;">まだ記録がありません</p>
+          </div>
+        </div>
+        <div class="result" id="result" style="margin-top:12px;">
+          <div class="card">
+            <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;color:#6366F1;">📊 サマリー</h3>
+            <div id="summary"></div>
+          </div>
+        </div>
+
+        <!-- 関連サービス -->
+        <div class="card" style="margin-top:8px;">
+            <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+                <a href="https://appadaycreator.github.io/electric-bill-simulator/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">電気代シミュレーター →</a>
+                <a href="https://appadaycreator.github.io/household-budget-analyzer/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">Household Budget Analyzer →</a>
+                <a href="https://appadaycreator.github.io/home-energy-advisor/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">家の断熱・省エネ診断 →</a>
+            </div>
+        </div>
+
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </main>
+
+    <footer style="text-align:center;padding:20px;color:white;font-size:12px;opacity:0.75;margin-top:8px;">
+        <p><a href="https://appadaycreator.github.io/" style="color:white;">AppADayCreator</a>
+        | <a href="privacy-policy.html" style="color:white;">プライバシーポリシー</a>
+        | <a href="terms.html" style="color:white;">利用規約</a>
+        | <a href="contact.html" style="color:white;">お問い合わせ</a></p>
+        <p style="margin-top:6px;">© 2025 AppADayCreator. All services are free.</p>
+    </footer>
+
+    <script>
+    // ★ここだけ実装（約12行）★
+    const KEY='utility-cost-tracker';
+    function getEntryData() {{
+      const month = document.getElementById('val-month')?.value || '';
+      const type = document.getElementById('val-type')?.value || '';
+      const amount = parseInt(document.getElementById('val-amount')?.value || '0', 10);
+      if (!month || !amount) {{ alert('年月と金額を入力してください'); return null; }}
+      return {{ month, type, amount }};
+    }}
+    function renderEntry(e) {{
+      const icons = {{ '電気':'⚡', 'ガス':'🔥', '水道':'💧' }};
+      return `<div style="padding:10px;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:14px;">${{icons[e.type]||''}} ${{e.month}} ${{e.type}}</span><span style="font-weight:700;color:#6366F1;">${{e.amount.toLocaleString()}}円 <button onclick="del(${{e.id}})" style="color:#ef4444;border:none;background:none;cursor:pointer;font-size:16px;">×</button></span></div>`;
+    }}
+    function getSummary(entries) {{
+      if (!entries.length) return '<p style="color:#bbb;font-size:14px;">記録なし</p>';
+      const total = entries.reduce((s, e) => s + e.amount, 0);
+      const byType = {{'電気':0,'ガス':0,'水道':0}};
+      entries.forEach(e => {{ if (byType[e.type] !== undefined) byType[e.type] += e.amount; }});
+      return `<p style="font-size:14px;">合計: <b style="color:#6366F1;">${{total.toLocaleString()}}円</b>（${{entries.length}}件）</p><p style="font-size:13px;color:#666;margin-top:6px;">⚡電気: ${{byType['電気'].toLocaleString()}}円 / 🔥ガス: ${{byType['ガス'].toLocaleString()}}円 / 💧水道: ${{byType['水道'].toLocaleString()}}円</p>`;
+    }}
+    // ★以下変更不要★
+    let entries=JSON.parse(localStorage.getItem(KEY)||'[]');
+    document.addEventListener('DOMContentLoaded',()=>{{ renderAll(); }});
+    function addEntry(){{
+      const d=getEntryData(); if(!d) return;
+      entries.unshift({{id:Date.now(),date:new Date().toLocaleDateString('ja-JP'),...d}});
+      localStorage.setItem(KEY,JSON.stringify(entries));
+      renderAll(); document.querySelectorAll('input:not([type=submit])').forEach(i=>i.value='');
+      document.getElementById('result').classList.add('show');
+    }}
+    function del(id){{ entries=entries.filter(e=>e.id!==id); localStorage.setItem(KEY,JSON.stringify(entries)); renderAll(); }}
+    function renderAll(){{
+      const c=document.getElementById('entries'); const ec=document.getElementById('entry-count');
+      if(ec) ec.textContent=entries.length+'件';
+      c.innerHTML=entries.length?entries.map(renderEntry).join(''):'<p style="text-align:center;color:#bbb;padding:16px;">まだ記録がありません</p>';
+      const s=document.getElementById('summary'); if(s) s.innerHTML=getSummary(entries);
+    }}
+    </script>
+</body>
+</html>
