@@ -1,8 +1,9 @@
 {
   "name": "Utility Cost Tracker",
   "short_name": "utility-cost",
-  "start_url": "/",
+  "start_url": "/utility-cost-tracker/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/utility-cost-tracker/"
 }
