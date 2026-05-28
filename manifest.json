@@ -3,7 +3,7 @@
   "short_name": "utility-cost",
   "start_url": "/utility-cost-tracker/",
   "display": "standalone",
-  "background_color": "#6366f1",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "scope": "/utility-cost-tracker/"
 }
