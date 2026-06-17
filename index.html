@@ -13,9 +13,9 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#7c3aed" />
-    <title>光熱費推移記録ツール【無料】簡単・無料計算</title>
-    <meta name="description" content="電気・ガス・水道の月別コストを記録して年間推移を可視化。節約目標設定にも対応">
+<meta name="theme-color" content="#10B981" />
+    <title>光熱費推移記録ツール｜電気・ガス・水道を自動記録しAI節約提案【無料】</title>
+    <meta name="description" content="月別光熱費を自動グラフ化。AI節約提案とリアルタイム比較で電気代削減。全国平均と比べて節約目標を達成。登録不要・完全無料。">
 <meta name="author" content="AppADayCreator">
     <link rel="canonical" href="https://appadaycreator.com/utility-cost-tracker/">
     <meta name="mobile-web-app-capable" content="yes">
@@ -52,23 +52,37 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: #f8fafc; min-height: 100vh; color: #333; line-height: 1.6; }
-        .site-header { background: #7c3aed; color: white; padding: 32px 20px; text-align: center; }
-        .site-header .emoji { font-size: 52px; margin-bottom: 8px; }
-        .site-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
-        .site-header p { font-size: 14px; opacity: 0.9; }
+        .site-header { background: linear-gradient(135deg,#10B981,#059669); color: white; padding: 22px 20px; }
+        .site-header .hd-in { max-width: 800px; margin: 0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+        .site-header .hd-l { display:flex; align-items:center; gap:12px; text-align:left; }
+        .site-header .emoji { font-size: 30px; width:48px;height:48px;background:rgba(255,255,255,.18);border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none; }
+        .site-header h1 { font-size: 20px; font-weight: 800; margin:0 0 2px; }
+        .site-header p { font-size: 12.5px; opacity: 0.92; margin:0; }
+        .site-header .hd-cta { background:#F59E0B; color:#fff; font-weight:700; font-size:13px; padding:9px 16px; border-radius:10px; white-space:nowrap; text-decoration:none; flex:none; }
+        /* KPI dashboard cards */
+        .kpi-row { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+        .kpi { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:14px; box-shadow:0 4px 14px rgba(0,0,0,.05); }
+        .kpi .t { font-size:12px; color:#6b7280; font-weight:600; display:flex; align-items:center; gap:6px; }
+        .kpi .v { font-size:22px; font-weight:800; margin-top:6px; color:#111827; }
+        .kpi.k-el { border-top:3px solid #F59E0B; }
+        .kpi.k-ga { border-top:3px solid #ef4444; }
+        .kpi.k-wa { border-top:3px solid #3b82f6; }
+        .kpi.k-sv { border-top:3px solid #10B981; }
+        .kpi.k-sv .v { color:#059669; }
+        @media (max-width:560px){ .kpi-row{ grid-template-columns:repeat(2,1fr);} .site-header .hd-cta{display:none;} }
         .container { max-width: 800px; margin: 0 auto; padding: 16px; }
         .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 16px; }
-        .btn { background: #7c3aed; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; min-height: 48px; touch-action: manipulation; }
+        .btn { background: #10B981; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; min-height: 48px; touch-action: manipulation; }
         .btn:hover { opacity: 0.9; }
         .btn:active { transform: scale(0.98); }
-        .btn:focus-visible { outline: 3px solid #7c3aed; outline-offset: 3px; }
+        .btn:focus-visible { outline: 3px solid #10B981; outline-offset: 3px; }
         input, select, textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 15px; margin-top: 4px; font-family: inherit; min-height: 44px; }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: #7c3aed; box-shadow: 0 0 0 3px #7c3aed22; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #10B981; box-shadow: 0 0 0 3px #10B98122; }
         label { font-size: 13px; font-weight: 600; color: #555; display: block; margin-top: 14px; margin-bottom: 2px; }
         .result { display: none; }
         .result.show { display: block; }
-        .result-value { font-size: 36px; font-weight: 700; color: #7c3aed; text-align: center; padding: 16px 0; }
-        .badge { display: inline-block; background: #7c3aed20; color: #7c3aed; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .result-value { font-size: 36px; font-weight: 700; color: #10B981; text-align: center; padding: 16px 0; }
+        .badge { display: inline-block; background: #10B98120; color: #10B981; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
         .help-icon { position: relative; }
         .help-icon:hover .tooltip-text { opacity: 1; pointer-events: auto; }
@@ -101,12 +115,19 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <a href="#main-content" class="sr-only" style="position:absolute;top:8px;left:8px;background:#7c3aed;color:white;padding:8px 16px;border-radius:6px;z-index:9999;text-decoration:none;font-size:14px;" tabindex="1">メインコンテンツへスキップ</a>
+    <a href="#main-content" class="sr-only" style="position:absolute;top:8px;left:8px;background:#10B981;color:white;padding:8px 16px;border-radius:6px;z-index:9999;text-decoration:none;font-size:14px;" tabindex="1">メインコンテンツへスキップ</a>
 
     <header class="site-header" role="banner">
-        <div class="emoji" aria-hidden="true">⚡</div>
-        <h1>光熱費推移記録ツール</h1>
-        <p>電気・ガス・水道の月別コストを記録して年間推移を可視化。節約目標設定にも対応...</p>
+      <div class="hd-in">
+        <div class="hd-l">
+          <div class="emoji" aria-hidden="true">⚡</div>
+          <div>
+            <h1>光熱費推移記録ツール</h1>
+            <p>電気・ガス・水道を記録して推移を自動グラフ化。AI節約提案にも対応</p>
+          </div>
+        </div>
+        <a href="lp/" class="hd-cta">サービス紹介を見る →</a>
+      </div>
     </header>
 <div style="background:#4338ca;padding:5px 12px;text-align:right;font-size:.78rem"><a href="/blog/" style="color:#c7d2fe;text-decoration:none;font-weight:600">📖 コラム</a>&nbsp;｜&nbsp;<a href="/" style="color:#c7d2fe;text-decoration:none">ホーム</a></div>
 <!-- r21-breadcrumb -->
@@ -132,11 +153,18 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         <ins class="adsbygoogle" style="display:block;min-height:90px;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>try{try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}}catch(e){}</script>
 
+        <div class="kpi-row" aria-label="今月のサマリー">
+          <div class="kpi k-el"><div class="t">⚡ 電気</div><div class="v" id="kpi-el">¥0</div></div>
+          <div class="kpi k-ga"><div class="t">🔥 ガス</div><div class="v" id="kpi-ga">¥0</div></div>
+          <div class="kpi k-wa"><div class="t">💧 水道</div><div class="v" id="kpi-wa">¥0</div></div>
+          <div class="kpi k-sv"><div class="t">🌱 今月の合計</div><div class="v" id="kpi-sv">¥0</div></div>
+        </div>
+
         <div class="card">
           <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;">⚡ 記録を追加</h2>
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
             <label style="font-size:13px;font-weight:600;margin:0;">年月</label>
-            <span class="help-icon" title="請求書や検針票に記載されている年月を選択してください。例: 2026年6月" style="cursor:help;width:18px;height:18px;background:#7c3aed;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
+            <span class="help-icon" title="請求書や検針票に記載されている年月を選択してください。例: 2026年6月" style="cursor:help;width:18px;height:18px;background:#10B981;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
               <span class="tooltip-text" style="position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#1f2937;color:white;padding:8px 12px;border-radius:6px;font-size:12px;white-space:nowrap;z-index:1000;opacity:0;pointer-events:none;transition:opacity 0.2s;">請求書に記載の年月を選択</span>
             </span>
           </div>
@@ -145,7 +173,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
             <label style="font-size:13px;font-weight:600;margin:0;">種別</label>
-            <span class="help-icon" title="電気代、ガス代、水道代のいずれかを選択" style="cursor:help;width:18px;height:18px;background:#7c3aed;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
+            <span class="help-icon" title="電気代、ガス代、水道代のいずれかを選択" style="cursor:help;width:18px;height:18px;background:#10B981;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
               <span class="tooltip-text" style="position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#1f2937;color:white;padding:8px 12px;border-radius:6px;font-size:12px;white-space:nowrap;z-index:1000;opacity:0;pointer-events:none;transition:opacity 0.2s;">電気・ガス・水道から選択</span>
             </span>
           </div>
@@ -157,7 +185,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
             <label style="font-size:13px;font-weight:600;margin:0;">金額（円）</label>
-            <span class="help-icon" title="検針票に記載の確定金額を入力。税込み価格で。小数点は不要" style="cursor:help;width:18px;height:18px;background:#7c3aed;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
+            <span class="help-icon" title="検針票に記載の確定金額を入力。税込み価格で。小数点は不要" style="cursor:help;width:18px;height:18px;background:#10B981;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
               <span class="tooltip-text" style="position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#1f2937;color:white;padding:8px 12px;border-radius:6px;font-size:12px;white-space:nowrap;z-index:1000;opacity:0;pointer-events:none;transition:opacity 0.2s;">整数で金額を入力</span>
             </span>
           </div>
@@ -191,7 +219,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         </div>
         <div class="result" id="result" style="margin-top:12px;">
           <div class="card">
-            <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;color:#7c3aed;">📊 サマリー</h3>
+            <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;color:#10B981;">📊 サマリー</h3>
             <div id="summary"></div>
             <div id="goal-progress" style="display:none;margin-top:12px;padding:12px;background:#f0fdf4;border-radius:8px;">
               <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
@@ -207,14 +235,14 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
           </div>
 
           <div class="card" style="margin-top:12px;">
-            <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;color:#7c3aed;">📈 月別推移グラフ</h3>
+            <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;color:#10B981;">📈 月別推移グラフ</h3>
             <div style="position:relative;height:300px;">
               <canvas id="chart-monthly"></canvas>
             </div>
           </div>
 
           <div class="card" style="margin-top:12px;">
-            <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;color:#7c3aed;">💡 種別別構成</h3>
+            <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;color:#10B981;">💡 種別別構成</h3>
             <div style="position:relative;height:250px;">
               <canvas id="chart-category"></canvas>
             </div>
@@ -225,9 +253,9 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
         <div class="card" style="margin-top:8px;">
             <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
             <div style="display:flex;flex-direction:column;gap:6px;">
-                <a href="https://appadaycreator.com/electric-bill-simulator/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">電気代シミュレーター →</a>
-                <a href="https://appadaycreator.com/household-budget-analyzer/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">Household Budget Analyzer →</a>
-                <a href="https://appadaycreator.com/home-energy-advisor/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">家の断熱・省エネ診断 →</a>
+                <a href="https://appadaycreator.com/electric-bill-simulator/" style="color:#10B981;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">電気代シミュレーター →</a>
+                <a href="https://appadaycreator.com/household-budget-analyzer/" style="color:#10B981;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">Household Budget Analyzer →</a>
+                <a href="https://appadaycreator.com/home-energy-advisor/" style="color:#10B981;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">家の断熱・省エネ診断 →</a>
             </div>
         </div>
 
@@ -391,7 +419,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
     function renderEntry(e) {
       const icons = { '電気':'⚡', 'ガス':'🔥', '水道':'💧' };
-      return `<div style="padding:10px;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:14px;">${icons[e.type]||''} ${e.month} ${e.type}</span><span style="font-weight:700;color:#7c3aed;">${e.amount.toLocaleString()}円 <button onclick="del(${e.id})" aria-label="${e.month} ${e.type}の記録を削除" style="color:#ef4444;border:none;background:none;cursor:pointer;font-size:16px;">×</button></span></div>`;
+      return `<div style="padding:10px;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:14px;">${icons[e.type]||''} ${e.month} ${e.type}</span><span style="font-weight:700;color:#10B981;">${e.amount.toLocaleString()}円 <button onclick="del(${e.id})" aria-label="${e.month} ${e.type}の記録を削除" style="color:#ef4444;border:none;background:none;cursor:pointer;font-size:16px;">×</button></span></div>`;
     }
 
     function getSummary(entries) {
@@ -399,7 +427,7 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       const total = entries.reduce((s, e) => s + e.amount, 0);
       const byType = {'電気':0,'ガス':0,'水道':0};
       entries.forEach(e => { if (byType[e.type] !== undefined) byType[e.type] += e.amount; });
-      return `<p style="font-size:14px;">合計: <b style="color:#7c3aed;">${total.toLocaleString()}円</b>（${entries.length}件）</p><p style="font-size:13px;color:#666;margin-top:6px;">⚡電気: ${byType['電気'].toLocaleString()}円 / 🔥ガス: ${byType['ガス'].toLocaleString()}円 / 💧水道: ${byType['水道'].toLocaleString()}円</p>`;
+      return `<p style="font-size:14px;">合計: <b style="color:#10B981;">${total.toLocaleString()}円</b>（${entries.length}件）</p><p style="font-size:13px;color:#666;margin-top:6px;">⚡電気: ${byType['電気'].toLocaleString()}円 / 🔥ガス: ${byType['ガス'].toLocaleString()}円 / 💧水道: ${byType['水道'].toLocaleString()}円</p>`;
     }
 
     function getCurrentMonthTotal() {
@@ -526,6 +554,26 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       drawCharts();
       updateGoal();
     }
+</script>
+<script>
+// KPI dashboard cards (additive – reads existing `entries`, does not alter core logic)
+(function(){
+  function updateKPIs(){
+    try{
+      var now=new Date();
+      var cm=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+      var by={'電気':0,'ガス':0,'水道':0};
+      var data=JSON.parse(localStorage.getItem('utility-cost-tracker')||'[]');
+      data.forEach(function(e){ if(e.month===cm && by[e.type]!==undefined) by[e.type]+=e.amount; });
+      var tot=by['電気']+by['ガス']+by['水道'];
+      var set=function(id,v){ var el=document.getElementById(id); if(el) el.textContent='¥'+v.toLocaleString(); };
+      set('kpi-el',by['電気']); set('kpi-ga',by['ガス']); set('kpi-wa',by['水道']); set('kpi-sv',tot);
+    }catch(e){}
+  }
+  if(typeof renderAll==='function'){ var _r=renderAll; window.renderAll=function(){ _r.apply(this,arguments); updateKPIs(); }; }
+  document.addEventListener('DOMContentLoaded', updateKPIs);
+  window.addEventListener('load', updateKPIs);
+})();
 </script>
     <!-- r31-use-cases -->
 <div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
