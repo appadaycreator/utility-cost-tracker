@@ -94,6 +94,65 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
             .btn { font-size: 15px; padding: 13px 20px; }
             .result-value { font-size: 28px; }
         }
+        /* ── ダッシュボード (デザイン02 準拠) ── */
+        .app-shell{display:flex;min-height:100vh;background:#eef2f0;}
+        .sidebar{width:250px;flex:none;background:#fff;border-right:1px solid #e5e7eb;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;}
+        .sb-brand{display:flex;align-items:center;gap:10px;padding:18px 18px 16px;font-weight:800;font-size:15px;color:#111827;border-bottom:1px solid #f1f5f9;}
+        .sb-brand .mk{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#10B981,#059669);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex:none;}
+        .sb-nav{padding:12px 12px 4px;display:flex;flex-direction:column;gap:3px;}
+        .sb-nav a{display:flex;align-items:center;gap:11px;padding:10px 13px;border-radius:10px;font-size:14px;font-weight:600;color:#475569;transition:background .15s,color .15s;}
+        .sb-nav a:hover{background:#f1f5f9;color:#111827;}
+        .sb-nav a.active{background:#ecfdf5;color:#059669;}
+        .sb-nav a .em{font-size:17px;width:20px;text-align:center;flex:none;}
+        .sb-spacer{flex:1;}
+        .sb-promo{margin:14px 12px;background:linear-gradient(135deg,#10B981,#059669);border-radius:14px;padding:16px;color:#fff;}
+        .sb-promo h4{font-size:13.5px;font-weight:800;line-height:1.5;margin-bottom:10px;}
+        .sb-promo a{display:block;text-align:center;background:#fff;color:#059669;font-weight:700;font-size:13px;padding:9px;border-radius:9px;}
+        .sb-line{margin:0 12px 16px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:13px;text-align:center;}
+        .sb-line p{font-size:12px;color:#166534;font-weight:600;margin-bottom:8px;}
+        .sb-line a{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#06C755;color:#fff;font-weight:700;font-size:12.5px;padding:8px 14px;border-radius:8px;width:100%;}
+        .app-body{flex:1;min-width:0;display:flex;flex-direction:column;}
+        .topbar{height:62px;flex:none;background:#fff;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between;padding:0 22px;position:sticky;top:0;z-index:60;}
+        .topbar .tb-title{font-size:18px;font-weight:800;color:#111827;display:flex;align-items:center;gap:10px;}
+        .topbar .tb-burger{display:none;font-size:22px;background:none;border:none;cursor:pointer;color:#374151;width:auto;min-height:auto;padding:4px;}
+        .topbar .tb-right{display:flex;align-items:center;gap:14px;}
+        .topbar .tb-ic{width:38px;height:38px;border-radius:10px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:17px;color:#475569;}
+        .topbar .tb-user{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:700;color:#374151;}
+        .topbar .tb-user .av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#10B981,#059669);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;}
+        .dash{padding:20px 22px 8px;width:100%;max-width:1240px;}
+        .dash-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;align-items:start;}
+        .dash-col{display:flex;flex-direction:column;gap:18px;min-width:0;}
+        .panel{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px;box-shadow:0 4px 16px rgba(0,0,0,.04);}
+        .panel-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+        .panel-h h2,.panel-h h3{font-size:15.5px;font-weight:800;color:#111827;display:flex;align-items:center;gap:8px;}
+        .kpi .t .ico{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex:none;}
+        .kpi .trend{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:20px;margin-top:8px;}
+        .trend.up{background:#fef2f2;color:#dc2626;}
+        .trend.down{background:#ecfdf5;color:#059669;}
+        .qa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+        .qa{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;cursor:pointer;font-size:12.5px;font-weight:700;color:#374151;text-align:center;transition:background .15s,border-color .15s;}
+        .qa:hover{background:#f0fdf4;border-color:#86efac;}
+        .qa .em{font-size:22px;}
+        .ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+        .ai-card{border-radius:14px;padding:16px;border:1px solid #e5e7eb;}
+        .ai-card.a{background:#ecfdf5;border-color:#bbf7d0;}
+        .ai-card.b{background:#fffbeb;border-color:#fde68a;}
+        .ai-card .h{display:flex;align-items:center;gap:8px;font-weight:800;font-size:13.5px;margin-bottom:7px;color:#111827;}
+        .ai-card p{font-size:13px;color:#475569;line-height:1.7;}
+        .ai-card .em{font-size:18px;}
+        @media (max-width:980px){
+            .sidebar{position:fixed;left:0;top:0;z-index:200;transform:translateX(-100%);transition:transform .25s;box-shadow:0 0 40px rgba(0,0,0,.2);}
+            .app-shell.nav-open .sidebar{transform:translateX(0);}
+            .topbar .tb-burger{display:block;}
+            .dash-grid{grid-template-columns:1fr;}
+            .nav-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:150;}
+            .app-shell.nav-open .nav-backdrop{display:block;}
+        }
+        @media (max-width:560px){
+            .dash{padding:14px 13px 4px;}
+            .topbar .tb-user .un{display:none;}
+            .ai-grid{grid-template-columns:1fr;}
+        }
         /* ── サービス固有CSS ── */
 
     
@@ -117,137 +176,159 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 
     <a href="#main-content" class="sr-only" style="position:absolute;top:8px;left:8px;background:#10B981;color:white;padding:8px 16px;border-radius:6px;z-index:9999;text-decoration:none;font-size:14px;" tabindex="1">メインコンテンツへスキップ</a>
 
-    <header class="site-header" role="banner">
-      <div class="hd-in">
-        <div class="hd-l">
-          <div class="emoji" aria-hidden="true">⚡</div>
-          <div>
-            <h1>光熱費推移記録ツール</h1>
-            <p>電気・ガス・水道を記録して推移を自動グラフ化。AI節約提案にも対応</p>
-          </div>
-        </div>
-        <a href="lp/" class="hd-cta">サービス紹介を見る →</a>
+<div class="app-shell" id="appShell">
+  <div class="nav-backdrop" onclick="toggleNav()" aria-hidden="true"></div>
+
+  <!-- Sidebar (デザイン02) -->
+  <aside class="sidebar" role="navigation" aria-label="メインメニュー">
+    <div class="sb-brand"><span class="mk" aria-hidden="true">⚡</span>光熱費推移記録ツール</div>
+    <nav class="sb-nav">
+      <a href="#main-content" class="active" onclick="closeNav()"><span class="em" aria-hidden="true">📊</span>ダッシュボード</a>
+      <a href="#panel-chart" onclick="closeNav()"><span class="em" aria-hidden="true">📈</span>月別レポート</a>
+      <a href="#panel-add" onclick="closeNav()"><span class="em" aria-hidden="true">✏️</span>データ入力</a>
+      <a href="#panel-goal" onclick="closeNav()"><span class="em" aria-hidden="true">🎯</span>目標設定</a>
+      <a href="#panel-breakdown" onclick="closeNav()"><span class="em" aria-hidden="true">🍩</span>内訳・比較</a>
+      <a href="#panel-advice" onclick="closeNav()"><span class="em" aria-hidden="true">🤖</span>節約アドバイス</a>
+      <a href="lp/"><span class="em" aria-hidden="true">ℹ️</span>サービス紹介</a>
+    </nav>
+    <div class="sb-spacer"></div>
+    <div class="sb-promo">
+      <h4>⚡ 電力会社を見直して、もっと節約！</h4>
+      <a href="lp/">AI診断を始める →</a>
+    </div>
+    <div class="sb-line">
+      <p>📣 今月のおすすめをシェア</p>
+      <a href="https://line.me/R/msg/text/?%E5%85%89%E7%86%B1%E8%B2%BB%E6%8E%A8%E7%A7%BB%E8%A8%98%E9%8C%B2%E3%83%84%E3%83%BC%E3%83%AB%0Ahttps%3A%2F%2Fappadaycreator.com%2Futility-cost-tracker%2F" target="_blank" rel="noopener">LINEでシェア</a>
+    </div>
+  </aside>
+
+  <div class="app-body">
+    <!-- Topbar -->
+    <header class="topbar" role="banner">
+      <div class="tb-title">
+        <button class="tb-burger" onclick="toggleNav()" aria-label="メニューを開く">☰</button>
+        ダッシュボード
+      </div>
+      <div class="tb-right">
+        <a href="lp/" class="tb-ic" title="サービス紹介" aria-label="サービス紹介">ℹ️</a>
+        <a href="/blog/" class="tb-ic" title="コラム" aria-label="コラム">📖</a>
+        <div class="tb-user"><span class="un">ようこそ</span><span class="av" aria-hidden="true">⚡</span></div>
       </div>
     </header>
-<div style="background:#4338ca;padding:5px 12px;text-align:right;font-size:.78rem"><a href="/blog/" style="color:#c7d2fe;text-decoration:none;font-weight:600">📖 コラム</a>&nbsp;｜&nbsp;<a href="/" style="color:#c7d2fe;text-decoration:none">ホーム</a></div>
-<!-- r21-breadcrumb -->
-<nav aria-label="パンくずリスト" style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:5px 16px;font-size:.78rem;color:#6b7280;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
-  <a href="/" style="color:#4f46e5;text-decoration:none">ホーム</a>
-  <span style="margin:0 .35rem;color:#9ca3af">›</span>
-  <span style="color:#374151">光熱費推移記録ツール【無料】簡単・無料計算</span>
-</nav>
 
+    <main id="main-content" role="main" aria-label="光熱費推移記録ツールのメインコンテンツ">
+      <div class="dash">
+        <!-- パンくず (SEO) -->
+        <nav aria-label="パンくずリスト" style="font-size:.78rem;color:#6b7280;margin-bottom:14px;">
+          <a href="https://appadaycreator.com/" style="color:#059669;text-decoration:none">ホーム</a>
+          <span style="margin:0 .35rem;color:#9ca3af">›</span>
+          <a href="https://appadaycreator.com/category/finance/" style="color:#059669;text-decoration:none">計算機・お金</a>
+          <span style="margin:0 .35rem;color:#9ca3af">›</span>
+          <span style="color:#374151">光熱費推移記録ツール</span>
+        </nav>
 
-    <main id="main-content" class="container" role="main" aria-label="光熱費推移記録ツールのメインコンテンツ">
-<nav aria-label="パンくずリスト" style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:6px 0;">
-  <div class="container mx-auto px-4">
-    <ol style="display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:0.8rem;color:#6b7280;list-style:none;margin:0;padding:0;">
-      <li><a href="https://appadaycreator.com/" style="color:#4b5563;text-decoration:none;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#4b5563'">ホーム</a></li>
-      <li style="color:#9ca3af;">›</li>
-      <li><a href="https://appadaycreator.com/category/finance/" style="color:#4b5563;text-decoration:none;" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#4b5563'">計算機・お金</a></li>
-      <li style="color:#9ca3af;">›</li>
-      <li style="color:#1f2937;">光熱費推移記録ツール簡単・無料計算</li>
-    </ol>
-  </div>
-</nav>
-        <ins class="adsbygoogle" style="display:block;min-height:90px;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <!-- KPIカード (デザイン02) -->
+        <div class="kpi-row" aria-label="今月のサマリー">
+          <div class="kpi k-el"><div class="t"><span class="ico" style="background:#fef3c7" aria-hidden="true">⚡</span>電気代</div><div class="v" id="kpi-el">¥0</div><span class="trend up" aria-hidden="true">▲ +12.4%</span></div>
+          <div class="kpi k-ga"><div class="t"><span class="ico" style="background:#ffedd5" aria-hidden="true">🔥</span>ガス代</div><div class="v" id="kpi-ga">¥0</div><span class="trend up" aria-hidden="true">▲ +3.1%</span></div>
+          <div class="kpi k-wa"><div class="t"><span class="ico" style="background:#dbeafe" aria-hidden="true">💧</span>水道代</div><div class="v" id="kpi-wa">¥0</div><span class="trend down" aria-hidden="true">▼ -1.8%</span></div>
+          <div class="kpi k-sv"><div class="t"><span class="ico" style="background:#dcfce7" aria-hidden="true">🌱</span>今月の合計</div><div class="v" id="kpi-sv">¥0</div><span class="trend down" aria-hidden="true">▼ 目標まで</span></div>
+        </div>
+
+        <ins class="adsbygoogle" style="display:block;min-height:90px;margin:0 0 18px" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>try{try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}}catch(e){}</script>
 
-        <div class="kpi-row" aria-label="今月のサマリー">
-          <div class="kpi k-el"><div class="t">⚡ 電気</div><div class="v" id="kpi-el">¥0</div></div>
-          <div class="kpi k-ga"><div class="t">🔥 ガス</div><div class="v" id="kpi-ga">¥0</div></div>
-          <div class="kpi k-wa"><div class="t">💧 水道</div><div class="v" id="kpi-wa">¥0</div></div>
-          <div class="kpi k-sv"><div class="t">🌱 今月の合計</div><div class="v" id="kpi-sv">¥0</div></div>
-        </div>
+        <div class="dash-grid">
+          <!-- 左カラム：グラフ・分析 -->
+          <div class="dash-col">
+            <div class="panel" id="panel-chart">
+              <div class="panel-h"><h2>📈 月別の光熱費推移</h2><button onclick="exportCSV()" style="width:auto;min-height:auto;background:#f1f5f9;border:1px solid #e5e7eb;color:#475569;padding:7px 14px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;">⬇ CSV</button></div>
+              <div style="position:relative;height:320px;"><canvas id="chart-monthly"></canvas></div>
+              <p style="font-size:12px;color:#94a3b8;margin-top:10px;text-align:center;">※ 記録を追加するとグラフが自動で描画されます（電気=黄 / ガス=赤 / 水道=青）</p>
+            </div>
 
-        <div class="card">
-          <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;">⚡ 記録を追加</h2>
-          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
-            <label style="font-size:13px;font-weight:600;margin:0;">年月</label>
-            <span class="help-icon" title="請求書や検針票に記載されている年月を選択してください。例: 2026年6月" style="cursor:help;width:18px;height:18px;background:#10B981;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
-              <span class="tooltip-text" style="position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#1f2937;color:white;padding:8px 12px;border-radius:6px;font-size:12px;white-space:nowrap;z-index:1000;opacity:0;pointer-events:none;transition:opacity 0.2s;">請求書に記載の年月を選択</span>
-            </span>
-          </div>
-          <input type="month" id="val-month" aria-label="年月を入力。例: 2026-06" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin-bottom:12px;">
-          <p style="font-size:12px;color:#6b7280;margin-bottom:10px;">💡 ガス・電気・水道の検針日が異なる場合は、各検針日を基準に記録してください。</p>
+            <div class="panel" id="panel-breakdown">
+              <div class="panel-h"><h3>🍩 種別別の内訳</h3></div>
+              <div style="position:relative;height:260px;"><canvas id="chart-category"></canvas></div>
+            </div>
 
-          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
-            <label style="font-size:13px;font-weight:600;margin:0;">種別</label>
-            <span class="help-icon" title="電気代、ガス代、水道代のいずれかを選択" style="cursor:help;width:18px;height:18px;background:#10B981;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
-              <span class="tooltip-text" style="position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#1f2937;color:white;padding:8px 12px;border-radius:6px;font-size:12px;white-space:nowrap;z-index:1000;opacity:0;pointer-events:none;transition:opacity 0.2s;">電気・ガス・水道から選択</span>
-            </span>
-          </div>
-          <select id="val-type" aria-label="種別を選択: 電気、ガス、水道" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin-bottom:12px;">
-            <option value="電気">⚡ 電気</option>
-            <option value="ガス">🔥 ガス</option>
-            <option value="水道">💧 水道</option>
-          </select>
-
-          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
-            <label style="font-size:13px;font-weight:600;margin:0;">金額（円）</label>
-            <span class="help-icon" title="検針票に記載の確定金額を入力。税込み価格で。小数点は不要" style="cursor:help;width:18px;height:18px;background:#10B981;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
-              <span class="tooltip-text" style="position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#1f2937;color:white;padding:8px 12px;border-radius:6px;font-size:12px;white-space:nowrap;z-index:1000;opacity:0;pointer-events:none;transition:opacity 0.2s;">整数で金額を入力</span>
-            </span>
-          </div>
-          <input type="number" id="val-amount" placeholder="例: 8500" min="0" aria-label="金額を円で入力。例: 8500" aria-describedby="amount-help" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin-bottom:12px;">
-          <p id="amount-help" style="font-size:12px;color:#6b7280;margin-bottom:10px;">💡 小数点は不要。0〜99999円の範囲で入力できます。</p>
-
-          <button class="btn" style="margin-top:16px;" onclick="addEntry()" aria-label="光熱費の記録を追加">追加する</button>
-        </div>
-
-        <div class="card" style="margin-top:12px;background:#fef3c7;border-left:4px solid #f59e0b;">
-          <h3 style="font-size:15px;font-weight:700;margin-bottom:10px;color:#92400e;">🎯 今月の節約目標</h3>
-          <p style="font-size:12px;color:#92400e;margin-bottom:10px;">💡 目標額を設定すると、記録した光熱費がその月にいくら達しているかを自動計算します。達成度がグラフで表示されます。</p>
-          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
-            <label style="font-size:13px;font-weight:600;color:#92400e;margin:0;">目標金額（円）</label>
-            <span class="help-icon" title="今月中に支払う予定の光熱費の合計目標額を入力" style="cursor:help;width:18px;height:18px;background:#f59e0b;color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;position:relative;">?
-              <span class="tooltip-text" style="position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#1f2937;color:white;padding:8px 12px;border-radius:6px;font-size:12px;white-space:nowrap;z-index:1000;opacity:0;pointer-events:none;transition:opacity 0.2s;">先月の実績から目標を設定</span>
-            </span>
-          </div>
-          <input type="number" id="val-goal" placeholder="例: 25000" min="0" aria-label="今月の目標金額を円で入力。例: 25000" aria-describedby="goal-help" style="width:100%;padding:10px;border:1px solid #f59e0b;border-radius:8px;font-size:14px;margin-bottom:10px;">
-          <p id="goal-help" style="font-size:12px;color:#92400e;margin-bottom:10px;">💡 目標額に達したら「目標達成！」と表示されます。前月実績から段階的に削減目標を立てるのがコツです。</p>
-          <button onclick="setGoal()" style="width:100%;background:#f59e0b;color:white;border:none;padding:10px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;min-height:44px;" aria-label="今月の節約目標を設定">目標を設定</button>
-        </div>
-        <div class="card" style="margin-top:12px;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-            <h2 style="font-size:16px;font-weight:700;">📋 記録一覧</h2>
-            <span id="entry-count" style="font-size:12px;color:#999;"></span>
-          </div>
-          <div id="entries">
-            <p style="text-align:center;color:#bbb;font-size:14px;padding:20px;">まだ記録がありません</p>
-          </div>
-        </div>
-        <div class="result" id="result" style="margin-top:12px;">
-          <div class="card">
-            <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;color:#10B981;">📊 サマリー</h3>
-            <div id="summary"></div>
-            <div id="goal-progress" style="display:none;margin-top:12px;padding:12px;background:#f0fdf4;border-radius:8px;">
-              <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
-                <span style="font-size:13px;font-weight:600;color:#15803d;">今月の達成度</span>
-                <span id="goal-percent" style="font-size:13px;font-weight:700;color:#15803d;">0%</span>
+            <div class="panel" id="panel-actions">
+              <div class="panel-h"><h3>⚡ クイックアクション</h3></div>
+              <div class="qa-grid">
+                <a class="qa" href="#panel-add"><span class="em" aria-hidden="true">✏️</span>データを入力</a>
+                <a class="qa" href="#panel-chart"><span class="em" aria-hidden="true">📊</span>推移を見る</a>
+                <a class="qa" href="#panel-goal"><span class="em" aria-hidden="true">🎯</span>目標を設定</a>
+                <a class="qa" href="lp/"><span class="em" aria-hidden="true">🤖</span>AI節約診断</a>
               </div>
-              <div style="width:100%;height:8px;background:#d1fae5;border-radius:4px;overflow:hidden;">
-                <div id="goal-bar" style="height:100%;background:#10b981;width:0%;transition:width 0.3s;"></div>
+            </div>
+          </div>
+
+          <!-- 右カラム：入力・記録 -->
+          <div class="dash-col">
+            <div class="panel" id="panel-add">
+              <div class="panel-h"><h2>✏️ 記録を追加</h2></div>
+              <label for="val-month" style="font-size:13px;font-weight:700;color:#374151;">年月</label>
+              <input type="month" id="val-month" aria-label="年月を入力。例: 2026-06" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin:4px 0 12px;">
+              <label for="val-type" style="font-size:13px;font-weight:700;color:#374151;">種別</label>
+              <select id="val-type" aria-label="種別を選択: 電気、ガス、水道" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin:4px 0 12px;">
+                <option value="電気">⚡ 電気</option>
+                <option value="ガス">🔥 ガス</option>
+                <option value="水道">💧 水道</option>
+              </select>
+              <label for="val-amount" style="font-size:13px;font-weight:700;color:#374151;">金額（円）</label>
+              <input type="number" id="val-amount" placeholder="例: 8500" min="0" aria-label="金額を円で入力。例: 8500" aria-describedby="amount-help" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px;margin:4px 0 6px;">
+              <p id="amount-help" style="font-size:12px;color:#6b7280;margin-bottom:10px;">💡 検針票の確定金額を整数で入力してください。</p>
+              <button class="btn" onclick="addEntry()" aria-label="光熱費の記録を追加">追加する</button>
+            </div>
+
+            <div class="panel" id="panel-goal" style="background:#fffbeb;border-color:#fde68a;">
+              <div class="panel-h"><h3 style="color:#92400e;">🎯 今月の節約目標</h3></div>
+              <label for="val-goal" style="font-size:13px;font-weight:700;color:#92400e;">目標金額（円）</label>
+              <input type="number" id="val-goal" placeholder="例: 25000" min="0" aria-label="今月の目標金額を円で入力。例: 25000" aria-describedby="goal-help" style="width:100%;padding:10px;border:1px solid #f59e0b;border-radius:8px;font-size:14px;margin:4px 0 6px;">
+              <p id="goal-help" style="font-size:12px;color:#92400e;margin-bottom:10px;">💡 前月実績から段階的に削減目標を立てるのがコツです。</p>
+              <button onclick="setGoal()" style="width:100%;background:#f59e0b;color:white;border:none;padding:11px;border-radius:9px;font-size:14px;font-weight:700;cursor:pointer;min-height:44px;" aria-label="今月の節約目標を設定">目標を設定</button>
+              <div class="result" id="result" style="margin-top:14px;">
+                <div id="summary" style="font-size:13px;"></div>
+                <div id="goal-progress" style="display:none;margin-top:12px;padding:12px;background:#f0fdf4;border-radius:8px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                    <span style="font-size:13px;font-weight:600;color:#15803d;">今月の達成度</span>
+                    <span id="goal-percent" style="font-size:13px;font-weight:700;color:#15803d;">0%</span>
+                  </div>
+                  <div style="width:100%;height:8px;background:#d1fae5;border-radius:4px;overflow:hidden;">
+                    <div id="goal-bar" style="height:100%;background:#10b981;width:0%;transition:width 0.3s;"></div>
+                  </div>
+                  <p id="goal-msg" style="font-size:12px;color:#059669;margin-top:6px;"></p>
+                </div>
               </div>
-              <p id="goal-msg" style="font-size:12px;color:#059669;margin-top:6px;"></p>
             </div>
-            <button onclick="exportCSV()" style="margin-top:12px;width:100%;background:#f8fafc;border:1.5px solid #d1d5db;color:#374151;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;" aria-label="光熱費記録をCSVでダウンロード">⬇ CSVダウンロード</button>
-          </div>
 
-          <div class="card" style="margin-top:12px;">
-            <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;color:#10B981;">📈 月別推移グラフ</h3>
-            <div style="position:relative;height:300px;">
-              <canvas id="chart-monthly"></canvas>
-            </div>
-          </div>
-
-          <div class="card" style="margin-top:12px;">
-            <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;color:#10B981;">💡 種別別構成</h3>
-            <div style="position:relative;height:250px;">
-              <canvas id="chart-category"></canvas>
+            <div class="panel" id="panel-list">
+              <div class="panel-h"><h3>📋 記録一覧</h3><span id="entry-count" style="font-size:12px;color:#999;font-weight:600;"></span></div>
+              <div id="entries">
+                <p style="text-align:center;color:#bbb;font-size:14px;padding:20px;">まだ記録がありません</p>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- AIによるあなたへのアドバイス (デザイン02) -->
+        <div class="panel" id="panel-advice" style="margin-top:18px;">
+          <div class="panel-h"><h2>🤖 AIによるあなたへのアドバイス</h2></div>
+          <div class="ai-grid">
+            <div class="ai-card a">
+              <div class="h"><span class="em" aria-hidden="true">💡</span>電気代の削減ポイント</div>
+              <p>エアコンの設定温度を冷房28℃・暖房20℃に。LED照明への交換で照明の電力を約80%削減できます。待機電力のカットも効果的です。</p>
+            </div>
+            <div class="ai-card b">
+              <div class="h"><span class="em" aria-hidden="true">🔁</span>料金プランの見直し</div>
+              <p>電気・ガスは自由化されており、使用パターンに合うプランへ切り替えるだけで年間数千〜数万円の削減が見込めます。乗り換えは無料・工事不要です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" style="max-width:820px;">
+
 
         <!-- 関連サービス -->
         <div class="card" style="margin-top:8px;">
