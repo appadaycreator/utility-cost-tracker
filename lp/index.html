@@ -52,43 +52,20 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .nav-links a{font-size:15px;font-weight:600;color:#374151;}
         .nav-links a:hover{color:var(--primary-d);}
         .nav-cta{padding:10px 18px;font-size:14px;}
-        /* Hero — light, airy, two-column with layered device mockups */
-        .hero{position:relative;overflow:hidden;color:var(--ink);background:linear-gradient(165deg,#e9fbf3 0%,#f1fdf9 42%,#ffffff 100%);}
-        .hero::before{content:"";position:absolute;top:-20%;right:-8%;width:60%;height:140%;background:radial-gradient(closest-side,rgba(16,185,129,.18),rgba(52,211,153,.06) 60%,transparent 75%);z-index:0;}
-        .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:120px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0 64 C 240 120 480 0 720 40 C 960 80 1200 130 1440 56 L1440 120 L0 120 Z'/%3E%3Cpath fill='%23d1fae5' fill-opacity='.55' d='M0 80 C 260 30 520 110 760 70 C 1000 30 1240 80 1440 48 L1440 120 L0 120 Z'/%3E%3C/svg%3E") bottom/cover no-repeat;z-index:1;}
-        .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.04fr .96fr;gap:46px;align-items:center;padding:78px 0 104px;max-width:1120px;}
-        .hero-copy{max-width:580px;}
-        .hero .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #bbf7d0;color:var(--primary-d);box-shadow:0 4px 12px rgba(16,185,129,.12);padding:7px 16px;border-radius:30px;font-size:13px;font-weight:700;margin-bottom:22px;}
+        /* Hero */
+        .hero{position:relative;color:#fff;background:linear-gradient(rgba(6,78,59,.72),rgba(4,120,87,.78)),url('../assets/photos/photo_01.jpg') center/cover no-repeat;}
+        .hero-in{padding:88px 0 96px;max-width:760px;}
+        .hero .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:7px 16px;border-radius:30px;font-size:13px;font-weight:600;margin-bottom:22px;}
         .hero h1{font-size:46px;line-height:1.3;font-weight:800;letter-spacing:-.01em;margin-bottom:20px;}
-        .hero h1 em{font-style:normal;color:var(--primary-d);background:linear-gradient(transparent 62%,#bbf7d0 62%);padding:0 2px;}
-        .hero p.lead{font-size:18px;color:#4b5563;margin-bottom:30px;max-width:560px;}
-        .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px;}
-        .hero-trust{display:flex;flex-wrap:wrap;gap:20px;font-size:13.5px;font-weight:600;color:#374151;}
+        .hero h1 em{font-style:normal;color:#fde68a;}
+        .hero p.lead{font-size:18px;opacity:.95;margin-bottom:30px;max-width:620px;}
+        .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px;}
+        .hero-trust{display:flex;flex-wrap:wrap;gap:22px;font-size:13.5px;font-weight:600;opacity:.95;}
         .hero-trust span{display:inline-flex;align-items:center;gap:7px;}
-        .hero-trust .dot{width:20px;height:20px;border-radius:50%;background:var(--primary);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px;}
-        /* Hero device mockups (layered PC + phone) */
-        .hero-visual{position:relative;min-height:360px;}
-        .dv-laptop{position:relative;z-index:1;background:#fff;border:1px solid #e3f2ec;border-radius:18px;padding:14px;box-shadow:0 34px 70px -24px rgba(6,78,59,.42),0 10px 24px rgba(0,0,0,.07);transform:rotate(-1.2deg);}
-        .dv-bar{display:flex;gap:6px;margin-bottom:13px;align-items:center;}
-        .dv-bar i{width:10px;height:10px;border-radius:50%;background:#e5e7eb;}
-        .dv-bar b{margin-left:auto;font-size:10px;color:#9ca3af;font-weight:600;}
-        .dv-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px;}
-        .dv-st{background:#f8fafc;border:1px solid #eef2f7;border-radius:10px;padding:9px 8px;}
-        .dv-st .n{font-size:15px;font-weight:800;line-height:1.1;}
-        .dv-st .l{font-size:8.5px;color:#9ca3af;margin-top:2px;}
-        .dv-st .t{font-size:8.5px;font-weight:700;}
-        .dv-chart{position:relative;background:#f8fafc;border:1px solid #eef2f7;border-radius:12px;padding:14px 14px 12px;height:138px;display:flex;align-items:flex-end;gap:7px;}
-        .dv-chart span{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#6ee7b7,#10b981);}
-        .dv-chart span:nth-child(odd){background:linear-gradient(180deg,#a7f3d0,#34d399);}
-        .dv-phone{position:absolute;right:-10px;bottom:-30px;z-index:2;width:132px;background:#fff;border:1px solid #e3f2ec;border-radius:24px;padding:12px 11px;box-shadow:0 26px 48px -18px rgba(6,78,59,.45);transform:rotate(3.5deg);}
-        .dv-phone .notch{width:42px;height:5px;border-radius:6px;background:#e5e7eb;margin:2px auto 11px;}
-        .dv-phone .big{font-size:22px;font-weight:800;color:var(--primary-d);line-height:1;}
-        .dv-phone .cap{font-size:9px;color:#9ca3af;margin:3px 0 11px;}
-        .dv-phone .mini{display:flex;align-items:flex-end;gap:4px;height:46px;}
-        .dv-phone .mini span{flex:1;border-radius:3px 3px 0 0;background:linear-gradient(180deg,#6ee7b7,#10b981);}
+        .hero-trust .dot{width:20px;height:20px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-size:12px;}
         /* Sections */
-        section{padding:92px 0;}
-        .sec-head{text-align:center;max-width:680px;margin:0 auto 56px;}
+        section{padding:72px 0;}
+        .sec-head{text-align:center;max-width:680px;margin:0 auto 48px;}
         .sec-head .kicker{color:var(--primary-d);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;}
         .sec-head h2{font-size:32px;font-weight:800;margin:10px 0 12px;line-height:1.35;}
         .sec-head p{color:var(--muted);font-size:16px;}
@@ -124,8 +101,8 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .cmp{max-width:900px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.06);}
         table.cmp-t{width:100%;border-collapse:collapse;}
         table.cmp-t th,table.cmp-t td{padding:16px 14px;text-align:center;border-bottom:1px solid var(--line);font-size:14.5px;}
-        table.cmp-t thead th{background:#059669;color:#fff;font-weight:700;font-size:14px;}
-        table.cmp-t thead th.us{background:linear-gradient(135deg,#10B981,#059669);box-shadow:inset 0 -3px 0 var(--accent);}
+        table.cmp-t thead th{background:#064e3b;color:#fff;font-weight:700;font-size:14px;}
+        table.cmp-t thead th.us{background:var(--primary);}
         table.cmp-t tbody td:first-child{text-align:left;font-weight:600;color:#374151;}
         table.cmp-t .us-col{background:#ecfdf5;font-weight:700;color:var(--primary-d);}
         .ok{color:var(--primary);font-weight:800;}
@@ -179,9 +156,6 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
             .stats,.voices{grid-template-columns:1fr;}
             .gallery{grid-template-columns:repeat(3,1fr);}
             .hero h1{font-size:34px;}
-            .hero-in{grid-template-columns:1fr;gap:54px;padding:64px 0 96px;}
-            .hero-copy{max-width:none;}
-            .hero-visual{min-height:0;margin-bottom:30px;max-width:440px;}
             .nav-links{display:none;}
         }
         @media(max-width:560px){
@@ -213,40 +187,20 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
   </div>
 </header>
 
-<!-- Hero (light, airy, layered device mockups) -->
+<!-- Hero (full photo background) -->
 <section class="hero">
   <div class="wrap hero-in">
-    <div class="hero-copy">
-      <span class="eyebrow">⚡ 電気・ガス・水道をまとめて記録・分析</span>
-      <h1>電気・ガス・水道の推移を<em>自動記録。</em><br>AI提案で年間いくら節約できる？</h1>
-      <p class="lead">月別光熱費を自動グラフ化。AI節約提案とリアルタイム比較で電気代を削減。全国平均と比べて、あなたの節約目標を達成しましょう。</p>
-      <div class="hero-cta">
-        <a href="../index.html" class="btn-primary">今月の節約をチェック →</a>
-        <a href="../index.html" class="btn-ghost">無料で使ってみる</a>
-      </div>
-      <div class="hero-trust">
-        <span><span class="dot">✓</span>登録不要・完全無料</span>
-        <span><span class="dot">✓</span>スマホ・PC対応</span>
-        <span><span class="dot">✓</span>データは端末内に保存</span>
-      </div>
+    <span class="eyebrow">⚡ 電気・ガス・水道をまとめて記録・分析</span>
+    <h1>電気・ガス・水道の推移を<em>自動記録。</em><br>AI提案で年間いくら節約できる？</h1>
+    <p class="lead">月別光熱費を自動グラフ化。AI節約提案とリアルタイム比較で電気代を削減。全国平均と比べて、あなたの節約目標を達成しましょう。</p>
+    <div class="hero-cta">
+      <a href="../index.html" class="btn-primary">今月の節約をチェック →</a>
+      <a href="../index.html" class="btn-ghost">無料で使ってみる</a>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="dv-laptop">
-        <div class="dv-bar"><i></i><i></i><i></i><b>光熱費ダッシュボード</b></div>
-        <div class="dv-stats">
-          <div class="dv-st"><div class="n" style="color:#10B981">18,453<small style="font-size:9px">円</small></div><div class="l">今月の合計</div><div class="t" style="color:#10B981">▼ 8.2%</div></div>
-          <div class="dv-st"><div class="n" style="color:#F59E0B">9,820<small style="font-size:9px">円</small></div><div class="l">電気</div><div class="t" style="color:#F59E0B">▲ 1.4%</div></div>
-          <div class="dv-st"><div class="n" style="color:#3b82f6">5,140<small style="font-size:9px">円</small></div><div class="l">ガス</div><div class="t" style="color:#10B981">▼ 4.0%</div></div>
-          <div class="dv-st"><div class="n" style="color:#06b6d4">3,493<small style="font-size:9px">円</small></div><div class="l">水道</div><div class="t" style="color:#10B981">▼ 2.1%</div></div>
-        </div>
-        <div class="dv-chart"><span style="height:48%"></span><span style="height:66%"></span><span style="height:54%"></span><span style="height:80%"></span><span style="height:62%"></span><span style="height:90%"></span><span style="height:70%"></span><span style="height:58%"></span><span style="height:74%"></span><span style="height:46%"></span></div>
-      </div>
-      <div class="dv-phone">
-        <div class="notch"></div>
-        <div class="big">¥2,814</div>
-        <div class="cap">今月の節約額</div>
-        <div class="mini"><span style="height:40%"></span><span style="height:62%"></span><span style="height:50%"></span><span style="height:78%"></span><span style="height:66%"></span><span style="height:90%"></span></div>
-      </div>
+    <div class="hero-trust">
+      <span><span class="dot">✓</span>登録不要・完全無料</span>
+      <span><span class="dot">✓</span>スマホ・PC対応</span>
+      <span><span class="dot">✓</span>データは端末内に保存</span>
     </div>
   </div>
 </section>
